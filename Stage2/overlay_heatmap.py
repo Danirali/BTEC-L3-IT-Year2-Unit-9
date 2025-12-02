@@ -43,12 +43,19 @@ def add_blob(heatmap, x, y, radius=15, intensity=40):
                 blob_intensity = blob + intensity
 
     save_heatmap(x, y, str(blob_intensity))
+    save_raw(heatmap, x, y, y_min, y_max, x_min, x_max, blob_intensity)
 
 def save_heatmap(x, y, point_intensity):
     with open(f'heatmap.txt','a') as heatmap_file:
         dict = {"x": x, "y": y, "intensity": point_intensity}
         heatmap_file.write(json.dumps(dict)+",")
         heatmap_file.close()
+
+def save_raw(heatmap, x, y, y_min, y_max, x_min, x_max, intensity):
+    with open(f'raw.txt','a') as raw_file:
+        dict = {"heatmap": heatmap,"x": x,"y": y,"y_min": y_min,"y_max": y_max,"x_min": x_min,"x_max": x_max,"intensity": intensity,}
+        raw_file.write(json.dumps(dict)+",")
+        raw_file.close()
 
 while True:
     ret, frame = cap.read()
