@@ -11,9 +11,9 @@ df['intensity'] = pd.to_numeric(df['intensity'], errors='coerce')
 plt.figure(figsize=(9, 7))
 scatter = plt.scatter(
     df['x'], df['y'],
-    c=df['intensity'],          # colour encodes intensity
-    cmap='viridis',              # try 'plasma', 'inferno', 'magma', etc.
-    s=30,                        # marker size
+    c=df['intensity'],          
+    cmap='YlOrRd',              
+    s=30,                        
     edgecolor='k', alpha=0.7
 )
 
