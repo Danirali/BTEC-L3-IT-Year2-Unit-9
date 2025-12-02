@@ -13,7 +13,7 @@ scatter = plt.scatter(
     df['x'], df['y'],
     c=df['intensity'],          
     cmap='YlOrRd',              
-    s=30,                        
+    s=df['intensity'],                        
     edgecolor='k', alpha=0.7
 )
 
