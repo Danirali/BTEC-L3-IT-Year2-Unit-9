@@ -1,4 +1,7 @@
 # BTEC-L3-IT-Year2-Unit-9
 
+Beta/Demo version of application.
 
-More info loading...
+Camera Required.
+
+Camera is not overlayed.
