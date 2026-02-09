@@ -4,4 +4,4 @@ Beta/Demo version of application.
 
 Camera Required.
 
-Camera is not overlayed.
+Camera is not overlayed. (Store Layout: 'store_layout.jpg')
